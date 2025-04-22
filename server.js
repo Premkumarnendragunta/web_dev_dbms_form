@@ -27,9 +27,9 @@ db.connect((err) => {
 
 // API endpoint
 app.post('/submit', (req, res) => {
-  const { name, email, college } = req.body;
-  const sql = 'INSERT INTO participants (name, email, college) VALUES (?, ?, ?)';
-  db.query(sql, [name, email, college], (err) => {
+  const { name, email, branch } = req.body;
+  const sql = 'INSERT INTO participants (name, email, branch ) VALUES (?, ?, ?)';
+  db.query(sql, [name, email, branch], (err) => {
     if (err) {
       console.error(err);
       return res.status(500).send(' Error saving data');

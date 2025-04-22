@@ -4,7 +4,7 @@ document.getElementById("registrationForm").addEventListener("submit", async fun
     const formData = {
       name: this.name.value,
       email: this.email.value,
-      college: this.college.value
+      branch: this.branch.value
     };
   
     const response = await fetch("/submit", {
